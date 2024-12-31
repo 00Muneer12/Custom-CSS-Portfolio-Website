@@ -1,16 +1,28 @@
 import React from 'react';
-import '../app/styles/heading.css';
+import Navbar from './Navbar';
+import '../app/styles/hero.css';
 
-interface propsType{
-    title:string;
-}
-
-const Hero: React.FC<propsType> = ({title}) => {
+const Hero = () => {
   return (
-    <div className='heading-container'>
-        <p className='heading-title'>{title}</p>
-    </div>
-  )
-}
+    <div 
+    id='hero' 
+    className='hero-container'
+    >
+        <Navbar />
+        <div className='hero-content'>
+            <div className='hidden lg:block'></div>
 
-export default Hero
+            <div className='hero-text'>
+                <div className='hero-slide'>
+                    <p data-aos="zoom-in-up">I&apos;m</p> {/* use &apos; for apostrophe */}
+                    <p className=' hover:text-white' data-aos="zoom-in-up">Ghulam</p>
+                    <p className=' hover:text-white' data-aos="zoom-in-up">Muneer</p>
+                    <p className=' hover:text-white' data-aos="zoom-in-up">Uddin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  );
+};
+
+export default Hero;

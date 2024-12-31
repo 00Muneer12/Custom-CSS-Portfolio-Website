@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from './Heading';
 import Card from './Card';
-import '../app/styles/projects.css';
+import '../app/styles/project.css'
 
 
 const data = [
